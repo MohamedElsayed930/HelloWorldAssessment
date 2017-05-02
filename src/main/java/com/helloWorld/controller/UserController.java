@@ -1,9 +1,5 @@
 package com.helloWorld.controller;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +9,6 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
 
 import com.helloWorld.model.User;
@@ -43,7 +38,7 @@ public class UserController {
 
 	@RequestMapping(value = "/report", method = RequestMethod.GET)
 	public String getAllUsers(Model model) {
-		List<User> list = userRepository.list();
+//		List<User> list = userRepository.list();
 		model.addAttribute("message", userRepository.list());
 		return "report";
 	}

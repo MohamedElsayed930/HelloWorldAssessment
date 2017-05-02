@@ -4,7 +4,6 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 import org.hibernate.validator.constraints.NotEmpty;
@@ -17,20 +16,16 @@ public class User {
 	@NotEmpty
 	private String firstName;
 	@NotEmpty
-	// @EAN
 	private String lastName;
 	@NotEmpty
 	private String address1;
 	private String address2;
 	@NotEmpty
-	// @EAN
 	private String city;
 	@NotEmpty
 	@Size(min = 2, max = 2)
 	private String state;
-	@Pattern(regexp = "[0-9]")
 	@NotEmpty
-	@Pattern(regexp = "[A-Za-z]\\d[A-Za-z]\\s?\\d[A-Za-z]\\d", message = "ZIP code validation failed.")
 	private String zip;
 	private String country;
 

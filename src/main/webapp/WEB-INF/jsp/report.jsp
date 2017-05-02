@@ -12,15 +12,16 @@
 <body>
 	<%@include file="header.jsp"%>
 	<table>
-		<th><spring:message code="user.firstName" /></th>
-		<th><spring:message code="user.lastName" /></th>
-		<th><spring:message code="user.address1" /></th>
-		<th><spring:message code="user.address2" /></th>
-		<th><spring:message code="user.city" /></th>
-		<th><spring:message code="user.state" /></th>
-		<th><spring:message code="user.zip" /></th>
-		<!-- <th></th>
-		<th></th> -->
+		<tr>
+			<td><spring:message code="user.firstName" /></td>
+			<td><spring:message code="user.lastName" /></td>
+			<td><spring:message code="user.address1" /></td>
+			<td><spring:message code="user.address2" /></td>
+			<td><spring:message code="user.city" /></td>
+			<td><spring:message code="user.state" /></td>
+			<td><spring:message code="user.zip" /></td>
+			<!-- <td></td><td></td> -->
+		</tr>
 		<c:forEach var="user" items="${message}">
 			<tr>
 				<td>${user.firstName}</td>

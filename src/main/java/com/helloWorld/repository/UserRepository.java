@@ -19,6 +19,7 @@ public class UserRepository {
 		session.getCurrentSession().saveOrUpdate(user);
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<User> list() {
 		return session.getCurrentSession().createQuery("from User").list();
 	}
